@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="t4is.uv.mx/dependencia"
+  xmlns:tns="t4is.uv.mx/dependencia" elementFormDefault="qualified">
+  <xs:element name="SolicitarCompraRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombreCliente" type="xs:string" />
+        <xs:element name="email" type="xs:string" />
+        <xs:element name="direccion" type="xs:string" />
+        <xs:element name="rfc" type="xs:string" />
+        <xs:element name="nomProducto" type="xs:string" />
+        <xs:element name="cantidad" type="xs:int" />
+        <xs:element name="precio" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SolicitarCompraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="totalCompra" type="xs:string" />
+        <xs:element name="folioCompra" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SolicitarSeguimientoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="folioSeguimiento" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SolicitarSeguimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="respuesta" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
